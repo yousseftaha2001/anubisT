@@ -1,0 +1,4 @@
+const hostphoto="https://firebasestorage.googleapis.com/v0/b/anubis-a770f.appspot.com/o/host.png?alt=media&token=d8bebd32-bf51-4258-bfe3-ce53df570bdb";
+const webDesign="https://firebasestorage.googleapis.com/v0/b/anubis-a770f.appspot.com/o/webdesign.png?alt=media&token=14798f33-ddf3-4ccc-a333-6a263c874a3e";
+const appDev="https://firebasestorage.googleapis.com/v0/b/anubis-a770f.appspot.com/o/appdev.png?alt=media&token=4ed4b887-e624-4bf4-ad92-2fd98ba12d32";
+const managmentPhoto="https://firebasestorage.googleapis.com/v0/b/anubis-a770f.appspot.com/o/managment.png?alt=media&token=e1f1e2d1-f278-4d95-8ddc-cf17e47c6d82";
