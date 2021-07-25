@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +12,6 @@ class OurServices extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
-
         children: [
           Container(
             color: Colors.blue,
@@ -54,43 +52,44 @@ class OurServices extends StatelessWidget {
             ),
           ),
           Container(
-              color: Colors.transparent,
-              height: size.height * 0.56,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      customCont(
-                        size: size,
-                        tiitle: "استضافة مواقع",
-                        photo: hostphoto,
-                      ),
-                      customCont(
-                        size: size,
-                        tiitle: "تصميم مواقع",
-                        photo: webDesign,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      customCont(
-                        size: size,
-                        tiitle: "تطبيقاتandroid&IOS\n   ",
-                        photo: appDev,
-                      ),
-                      customCont(
-                        size: size,
-                        tiitle: "برامج الحسابات\n والادارات",
-                        photo: managmentPhoto,
-                      ),
-                    ],
-                  ),
-                ],
-              )),
+            color: Colors.transparent,
+            height: size.height * 0.56,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    customCont(
+                      size: size,
+                      tiitle: "استضافة مواقع",
+                      photo: hostphoto,
+                    ),
+                    customCont(
+                      size: size,
+                      tiitle: "تصميم مواقع",
+                      photo: webDesign,
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    customCont(
+                      size: size,
+                      tiitle: "تطبيقاتandroid&IOS\n   ",
+                      photo: appDev,
+                    ),
+                    customCont(
+                      size: size,
+                      tiitle: "برامج الحسابات\n والادارات",
+                      photo: managmentPhoto,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -123,7 +122,7 @@ class OurServices extends StatelessWidget {
             height: size.width / 4,
           ),
           CustomText(
-            title:tiitle,
+            title: tiitle,
             color: Colors.white,
             fontWeight: FontWeight.bold,
             fontSize: size.height / 50,

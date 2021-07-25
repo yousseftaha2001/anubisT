@@ -5,6 +5,7 @@ class CustomText extends StatelessWidget {
   late Color color;
   late FontWeight fontWeight;
   late double fontSize;
+  late bool left = true;
 
   CustomText({
     required this.title,
@@ -13,15 +14,21 @@ class CustomText extends StatelessWidget {
     required this.fontSize,
   });
 
+  CustomText.direction({
+    required this.title,
+    required this.color,
+    required this.fontWeight,
+    required this.fontSize,
+    required this.left
+  });
+
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: TextStyle(
-        fontSize: fontSize,
-        color: color,
-        fontWeight: fontWeight
-      ),
+      textDirection:left?TextDirection.ltr: TextDirection.rtl,
+      style:
+          TextStyle(fontSize: fontSize, color: color, fontWeight: fontWeight),
     );
   }
 }

@@ -1,12 +1,13 @@
-
 import 'package:anubiss/widgets/aboutus.dart';
 import 'package:anubiss/widgets/main.dart';
 import 'package:anubiss/widgets/ourServices.dart';
 import 'package:anubiss/widgets/ourworks.dart';
+import 'package:anubiss/widgets/profile.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
 
@@ -22,10 +23,13 @@ class _HomeScreenState extends State<HomeScreen> {
     OurServices(),
   ];
   Widget _selectedTab = tabs.first;
+  late Widget _upperTab;
+  bool _upper = false;
 
 //newwwwwwwwww
   void _handleIndexChanged(int i) {
     setState(() {
+      _upper = false;
       _selectedTab = tabs.elementAt(i);
     });
   }
@@ -35,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       extendBody: true,
       bottomNavigationBar: DotNavigationBar(
         backgroundColor: Colors.white70,
@@ -88,9 +93,17 @@ class _HomeScreenState extends State<HomeScreen> {
               Icon(Icons.ac_unit),
               Row(
                 children: [
-                  Icon(
-                    Icons.person_rounded,
-                    color: Color(0xff2F3A73),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _upper = true;
+                        _upperTab = Profile();
+                      });
+                    },
+                    child: Icon(
+                      Icons.person_rounded,
+                      color: _upper ? Color(0xffE78F0B) : Color(0xff2F3A73),
+                    ),
                   ),
                   SizedBox(width: size.width * 0.06),
                   Icon(
@@ -103,13 +116,15 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Container(
-            height: size.height / 1.28,
-            child: _selectedTab,
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              height: size.height / 1.28,
+              child: _upper ? _upperTab : _selectedTab,
+            ),
+          ],
+        ),
       ),
     );
   }
