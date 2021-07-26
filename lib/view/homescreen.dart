@@ -3,6 +3,7 @@ import 'package:anubiss/widgets/main.dart';
 import 'package:anubiss/widgets/ourServices.dart';
 import 'package:anubiss/widgets/ourworks.dart';
 import 'package:anubiss/widgets/profile.dart';
+import 'package:anubiss/widgets/register.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
@@ -97,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onTap: () {
                       setState(() {
                         _upper = true;
-                        _upperTab = Profile();
+                        _upperTab = Register();
                       });
                     },
                     child: Icon(

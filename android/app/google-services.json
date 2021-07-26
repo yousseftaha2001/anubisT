@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "653015620609",
+    "project_id": "anubis-a770f",
+    "storage_bucket": "anubis-a770f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653015620609:android:0ceb14c431b80d82e57400",
+        "android_client_info": {
+          "package_name": "com.example.anubiss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653015620609-5erphsfuon5cq9vrrfg1ivh24mv66r26.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.anubiss",
+            "certificate_hash": "8488702a3868c4c0a34f966bea3e5b4eebf811d0"
+          }
+        },
+        {
+          "client_id": "653015620609-d3mbkqh23hodnqnkd2f9n737ccjbetve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkLAr4cIlMYEhTaZwZbI3nZQ0la-1ppfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "653015620609-d3mbkqh23hodnqnkd2f9n737ccjbetve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
