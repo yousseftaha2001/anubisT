@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">653015620609-d3mbkqh23hodnqnkd2f9n737ccjbetve.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">653015620609</string>
+    <string name="google_api_key" translatable="false">AIzaSyCkLAr4cIlMYEhTaZwZbI3nZQ0la-1ppfE</string>
+    <string name="google_app_id" translatable="false">1:653015620609:android:0ceb14c431b80d82e57400</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCkLAr4cIlMYEhTaZwZbI3nZQ0la-1ppfE</string>
+    <string name="google_storage_bucket" translatable="false">anubis-a770f.appspot.com</string>
+    <string name="project_id" translatable="false">anubis-a770f</string>
+</resources>

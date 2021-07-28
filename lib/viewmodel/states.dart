@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ManageState extends ChangeNotifier{
-  bool state=false;
+  bool state=true;
 
   void changeState(){
     state=!state;

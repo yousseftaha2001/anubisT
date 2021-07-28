@@ -101,14 +101,17 @@ class AuthManagment extends ChangeNotifier {
                                   print("done reg");
                                   print(result);
                                   changeScanCode();
-                                  Navigator.pop(context);
+                                  //goto image
+                                  Provider.of<ManageState>(
+                                      context, listen: false).changeState();
+                                Navigator.pop(context);
                                 } else {
-                                  print("error");
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text(result),
-                                    ),
-                                  );
+                                print("error");
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                content: Text(result),
+                                ),
+                                );
                                 }
                               },
                               child: CustomText(
@@ -123,8 +126,8 @@ class AuthManagment extends ChangeNotifier {
                                   Color(0xff2F3A73),
                                 ),
                                 backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                        Color(0xff2F3A73)),
+                                MaterialStateProperty.all<Color>(
+                                    Color(0xff2F3A73)),
                                 minimumSize: MaterialStateProperty.all<Size>(
                                   Size(
                                     size.width / 2.5,
@@ -151,7 +154,6 @@ class AuthManagment extends ChangeNotifier {
         );
       },
     );
-
   }
 
   Future<String> activeCode({required String code, required String vri}) async {
@@ -160,7 +162,7 @@ class AuthManagment extends ChangeNotifier {
       smsCode: code,
     );
     UserCredential userCredential =
-        await FirebaseAuth.instance.signInWithCredential(credential);
+    await FirebaseAuth.instance.signInWithCredential(credential);
     if (userCredential.user!.uid.isNotEmpty) {
       String uid = userCredential.user!.uid;
       return uid;
